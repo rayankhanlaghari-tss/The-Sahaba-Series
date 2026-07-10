@@ -123,6 +123,40 @@
     text-align: center;
   }
 
+  .how-it-works {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5vw 1rem;
+  }
+  .how-it-works .marker-label {
+    font-family: 'Inter', sans-serif; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: 0.75rem; color: var(--bronze); display: block; margin-bottom: 0.8rem;
+  }
+  .how-it-works h2 { font-size: 1.5rem; margin-bottom: 2rem; }
+  .steps-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .step-card {
+    background: var(--parchment-dim);
+    border: 1px solid rgba(140,109,49,0.3);
+    padding: 1.5rem;
+    border-radius: 3px;
+  }
+  .step-card .step-num {
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    color: var(--bronze);
+    margin-bottom: 0.6rem;
+  }
+  .step-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+  .step-card p { font-size: 0.88rem; color: #4a4033; }
+
+  @media (max-width: 700px) {
+    .steps-row { grid-template-columns: 1fr; }
+  }
+
   footer {
     background: var(--ink); color: rgba(239,230,211,0.6); padding: 2.5rem 5vw;
     font-family: 'Inter', sans-serif; font-size: 0.82rem;
@@ -162,12 +196,34 @@
   </div>
 </header>
 
+<section class="how-it-works">
+  <span class="marker-label">How It Works</span>
+  <h2>Simple, from application to payout.</h2>
+  <div class="steps-row">
+    <div class="step-card">
+      <div class="step-num">01</div>
+      <h3>Apply</h3>
+      <p>Fill out the form below — takes less than a minute.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">02</div>
+      <h3>Get your link</h3>
+      <p>Once approved, you'll receive a unique tracking link through Gumroad's affiliate system.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">03</div>
+      <h3>Earn 30% per sale</h3>
+      <p>Every sale through your link is tracked automatically, and your 30% commission is paid out directly through Gumroad.</p>
+    </div>
+  </div>
+</section>
+
 <div class="forms-wrap">
 
   <div class="form-card">
     <span class="marker-label">Become an Affiliate</span>
     <h2>Affiliate Application</h2>
-    <p>Share the book with your audience and earn a commission on every sale through your link.</p>
+    <p>Share the book with your audience and earn <strong>30% commission</strong> on every sale through your link.</p>
 
     <form action="https://formspree.io/f/mlgykyen" method="POST">
       <input type="hidden" name="_subject" value="New Affiliate Application — Sahabas Series">

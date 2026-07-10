@@ -74,25 +74,28 @@
     gap: 1.5rem;
   }
   .volume-card {
-    background: var(--parchment-dim);
-    border: 1px solid rgba(140,109,49,0.3);
+    background: var(--night);
+    border: 1px solid rgba(201,162,39,0.25);
     padding: 1.8rem;
     border-radius: 3px;
     position: relative;
-  }
-  .volume-card.featured {
-    background: var(--night);
-    border-color: rgba(201,162,39,0.4);
     color: var(--parchment);
   }
   .volume-card .tag {
     font-family: 'Inter', sans-serif; font-size: 0.68rem; text-transform: uppercase;
-    letter-spacing: 0.1em; color: var(--bronze); margin-bottom: 0.7rem; display: block; font-weight: 600;
+    letter-spacing: 0.1em; color: var(--gold); margin-bottom: 0.7rem; display: block; font-weight: 600;
   }
-  .volume-card.featured .tag { color: var(--gold); }
   .volume-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
-  .volume-card p { font-size: 0.92rem; color: #4a4033; margin-bottom: 1rem; }
-  .volume-card.featured p { color: var(--parchment-dim); }
+  .volume-card p { font-size: 0.92rem; color: var(--parchment-dim); margin-bottom: 1rem; }
+  .volume-thumb {
+    width: 100%;
+    max-width: 160px;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 3px;
+    margin: 0 auto 1.2rem;
+    display: block;
+  }
   .volume-link {
     font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
     color: var(--gold-light); text-decoration: none;
@@ -162,6 +165,7 @@
   <h2>Where the series stands today.</h2>
   <div class="volume-cards">
     <div class="volume-card featured">
+      <img class="volume-thumb" src="as-siddique-cover.png" alt="The Legend of As-Siddique book cover">
       <span class="tag">Book One — Available Now</span>
       <h3>The Legend of As-Siddique</h3>
       <p>The story of Hazrat Abu Bakr (RA) — the Companion of the Cave, and the first Caliph who held the Ummah together when it could have fallen apart.</p>
