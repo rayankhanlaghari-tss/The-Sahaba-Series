@@ -104,6 +104,33 @@
   }
   .volume-card a { text-decoration: none; display: block; }
   .volume-card a:hover .volume-thumb { transform: translateY(-3px); }
+
+  .cover-card {
+    position: relative;
+    min-height: 420px;
+    background-size: cover;
+    background-position: center top;
+    text-decoration: none;
+    overflow: hidden;
+    transition: transform .2s ease;
+  }
+  .cover-card:hover { transform: translateY(-4px); }
+  .cover-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(20,16,12,0.05) 35%, rgba(20,16,12,0.85) 75%, rgba(20,16,12,0.97) 100%);
+  }
+  .cover-card-content {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    padding: 1.6rem;
+    z-index: 1;
+  }
+  .cover-card-content .tag { color: var(--gold); }
+  .cover-card-content h3 { color: var(--parchment); }
+  .cover-card-content p { color: var(--parchment-dim); }
+  .cover-card-content .volume-link { display: inline-block; margin-top: 0.4rem; }
   .volume-link {
     font-family: 'Inter', sans-serif; font-size: 0.8rem; font-weight: 600;
     color: var(--gold-light); text-decoration: none;
@@ -172,15 +199,14 @@
   </div>
   <h2>Where the series stands today.</h2>
   <div class="volume-cards">
-    <div class="volume-card featured">
-      <a href="book.html">
-        <img class="volume-thumb" src="as-siddique-cover-flat.png" alt="The Legend of As-Siddique book cover">
-      </a>
-      <span class="tag">Book One — Available Now</span>
-      <h3>The Legend of As-Siddique</h3>
-      <p>The story of Hazrat Abu Bakr (RA) — the Companion of the Cave, and the first Caliph who held the Ummah together when it could have fallen apart.</p>
-      <a class="volume-link" href="book.html">Read more →</a>
-    </div>
+    <a href="book.html" class="volume-card featured cover-card" style="background-image: url('as-siddique-cover-flat.png');">
+      <div class="cover-card-content">
+        <span class="tag">Book One — Available Now</span>
+        <h3>The Legend of As-Siddique</h3>
+        <p>The story of Hazrat Abu Bakr (RA) — the Companion of the Cave, and the first Caliph who held the Ummah together when it could have fallen apart.</p>
+        <span class="volume-link">Read more →</span>
+      </div>
+    </a>
     <div class="volume-card">
       <span class="tag">Coming Next</span>
       <h3>The Legend of Al-Farooq</h3>
