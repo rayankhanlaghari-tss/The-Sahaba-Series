@@ -36,7 +36,7 @@
     display: flex; justify-content: space-between; align-items: center;
     padding: 0.7rem 5vw; background: var(--night); color: var(--parchment); font-family: 'Inter', sans-serif;
   }
-  .nav-brand { display: flex; align-items: center; gap: 0.7rem; }
+  .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; }
   .nav-brand img { height: 42px; width: 42px; border-radius: 50%; object-fit: cover; }
   .nav-brand span { font-family: 'Fraunces', serif; font-size: 1.05rem; }
   .nav-links { display: flex; gap: 2rem; font-size: 0.85rem; }
@@ -166,10 +166,10 @@
 <body>
 
 <nav>
-  <div class="nav-brand">
+  <a class="nav-brand" href="index.html">
     <img src="logo.png" alt="The Sahabas Series logo">
     <span>The Sahabas Series</span>
-  </div>
+  </a>
   <div class="nav-links">
     <a href="book.html">The Book</a>
     <a href="series.html" class="active">The Series</a>
