@@ -36,33 +36,20 @@
   }
 
   nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 20px 6%;
-    background: var(--night);
-    border-bottom: 1px solid rgba(201, 162, 39, 0.2);
-  }
-
-  nav .logo-group {
-    display: flex;
     align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  nav img.logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-  }
-
-  nav .brand-name {
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 1.1rem;
+    padding: 0.7rem 5vw;
+    background: var(--night);
     color: var(--parchment);
+    font-family: 'Inter', sans-serif;
   }
+  .nav-brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: inherit; }
+  .nav-brand img { height: 42px; width: 42px; border-radius: 50%; object-fit: cover; }
+  .nav-brand span { font-family: 'Fraunces', serif; font-size: 1.05rem; }
 
   main {
     max-width: 600px;
@@ -147,9 +134,9 @@
 <body>
 
 <nav>
-  <a href="index.html" class="logo-group">
-    <img src="logo.png" alt="The Sahabas Series" class="logo">
-    <span class="brand-name">The Sahabas Series</span>
+  <a class="nav-brand" href="index.html">
+    <img src="logo.png" alt="The Sahabas Series logo">
+    <span>The Sahabas Series</span>
   </a>
 </nav>
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Sahabas Series — Redefining Muslim Heroes</title>
-  <meta property="og:title" content="The Sahabas Series — Redefining Muslim Heroes">
+<title>The Sahabas Series: Redefining Muslim Heroes</title>
+  <meta property="og:title" content="The Sahabas Series: Redefining Muslim Heroes">
 <meta property="og:description" content="Narrative biographies of the Prophet's Companions, written for readers who want history that breathes.">
 <meta property="og:image" content="https://the-sahaba-series.netlify.app/as-siddique-banner.png">
 <meta property="og:url" content="https://the-sahaba-series.netlify.app">
@@ -154,6 +154,26 @@
     border-radius: 2px;
   }
 
+  /* ---------- Free chapter strip ---------- */
+  .free-chapter-strip {
+    background: var(--parchment-dim);
+    border-bottom: 1px solid rgba(140,109,49,0.3);
+    padding: 2.8rem 5vw;
+  }
+  .free-chapter-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+  .fc-text { flex: 1; min-width: 260px; }
+  .fc-text .eyebrow { color: var(--bronze); margin-bottom: 0.5rem; display: block; }
+  .fc-text h2 { font-size: clamp(1.35rem, 2.6vw, 1.7rem); margin-bottom: 0.4rem; }
+  .fc-text p { color: #4a4033; font-size: 0.98rem; max-width: 480px; }
+
   /* ---------- Sections ---------- */
   .marker-section { padding: 5rem 5vw; max-width: 1000px; margin: 0 auto; }
   .marker { display: flex; align-items: baseline; gap: 1.2rem; margin-bottom: 2.2rem; }
@@ -247,6 +267,7 @@
   <div class="nav-links">
     <a href="book.html">The Book</a>
     <a href="series.html">The Series</a>
+    <a href="free-chapter.html">Free Chapter</a>
     <a href="join.html">Join Us</a>
   </div>
   <a class="nav-cta" href="https://rayankhan0.gumroad.com/l/AsSiddique" target="_blank" rel="noopener">Get the Book</a>
@@ -256,7 +277,7 @@
   <div class="hero-top">
     <div class="eyebrow">The Sahabas Series</div>
     <h1>Redefining <em>Muslim Heroes</em>.</h1>
-    <p>Narrative biographies of the Prophet's Companions — written for readers who want history that breathes.</p>
+    <p>Narrative biographies of the Prophet's Companions, written for readers who want history that breathes.</p>
   </div>
   <div class="hero-banner">
     <img src="as-siddique-banner.png" alt="The Legend of As-Siddique book cover, a biography of Hazrat Abu Bakr RA">
@@ -264,10 +285,21 @@
 </header>
 
 <div class="book-cta-strip">
-  <a class="btn-primary" href="https://rayankhan0.gumroad.com/l/AsSiddique" target="_blank" rel="noopener">Buy the Ebook — Gumroad</a>
-  <span class="badge">Paperback — Coming Soon</span>
-  <span class="badge">Audiobook — Coming Soon</span>
+  <a class="btn-primary" href="https://rayankhan0.gumroad.com/l/AsSiddique" target="_blank" rel="noopener">Buy the Ebook on Gumroad</a>
+  <span class="badge">Paperback: Coming Soon</span>
+  <span class="badge">Audiobook: Coming Soon</span>
 </div>
+
+<section class="free-chapter-strip" id="free-chapter">
+  <div class="free-chapter-inner">
+    <div class="fc-text">
+      <span class="eyebrow">Free Chapter</span>
+      <h2>Read Chapter One before you buy.</h2>
+      <p>Get the opening chapter of The Legend of As-Siddique sent straight to your inbox, free.</p>
+    </div>
+    <a class="btn-primary" href="free-chapter.html">Get the Free Chapter</a>
+  </div>
+</section>
 
 <section class="marker-section" id="series">
   <div class="marker">
