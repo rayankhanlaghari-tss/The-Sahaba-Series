@@ -37,7 +37,14 @@
   .nav-links { display: flex; gap: 2rem; font-size: 0.85rem; }
   .nav-links a { text-decoration: none; opacity: 0.8; transition: opacity .2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
-  .nav-cta { background: var(--gold); color: var(--night); padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
+  .nav-cta {
+    background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+    color: var(--night); padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.8rem; font-weight: 600;
+    text-decoration: none; display: inline-block;
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,0.6), 0 4px 12px -2px rgba(201,162,39,0.55);
+    transform: translateY(-3px); transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .nav-cta:hover { transform: translateY(-6px); box-shadow: 0 16px 26px -8px rgba(0,0,0,0.65), 0 6px 14px -2px rgba(201,162,39,0.6); }
 
   .hero {
     background: linear-gradient(180deg, var(--night) 0%, var(--charcoal) 100%);
@@ -102,7 +109,7 @@
   .btn-submit {
     margin-top: 1.8rem;
     width: 100%;
-    background: var(--gold);
+    background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
     color: var(--night);
     border: none;
     padding: 0.9rem;
@@ -111,9 +118,14 @@
     font-size: 0.92rem;
     border-radius: 3px;
     cursor: pointer;
-    transition: transform .15s ease;
+    box-shadow: 0 14px 24px -10px rgba(0,0,0,0.5), 0 4px 10px -4px rgba(201,162,39,0.4);
+    transform: translateY(-3px);
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .btn-submit:hover { transform: translateY(-2px); }
+  .btn-submit:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 28px -10px rgba(0,0,0,0.55), 0 6px 14px -4px rgba(201,162,39,0.5);
+  }
 
   .form-note {
     font-family: 'Inter', sans-serif;
@@ -183,9 +195,10 @@
   <div class="nav-links">
     <a href="book.html">The Book</a>
     <a href="series.html">The Series</a>
+    <a href="free-chapter.html">Free Chapter</a>
     <a href="join.html" class="active">Join Us</a>
   </div>
-  <a class="nav-cta" href="https://rayankhan0.gumroad.com/l/AsSiddique" target="_blank" rel="noopener">Get the Book</a>
+  <a class="nav-cta" href="https://wa.me/923317537184?text=I%20want%20The%20Legend%20of%20As-Siddique%20Book" target="_blank" rel="noopener">Get the Book</a>
 </nav>
 
 <header class="hero">

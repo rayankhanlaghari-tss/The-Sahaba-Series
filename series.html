@@ -42,7 +42,14 @@
   .nav-links { display: flex; gap: 2rem; font-size: 0.85rem; }
   .nav-links a { text-decoration: none; opacity: 0.8; transition: opacity .2s; }
   .nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--gold); }
-  .nav-cta { background: var(--gold); color: var(--night); padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.8rem; font-weight: 600; text-decoration: none; }
+  .nav-cta {
+    background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+    color: var(--night); padding: 0.55rem 1.2rem; border-radius: 2px; font-size: 0.8rem; font-weight: 600;
+    text-decoration: none; display: inline-block;
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,0.6), 0 4px 12px -2px rgba(201,162,39,0.55);
+    transform: translateY(-3px); transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .nav-cta:hover { transform: translateY(-6px); box-shadow: 0 16px 26px -8px rgba(0,0,0,0.65), 0 6px 14px -2px rgba(201,162,39,0.6); }
 
   .hero {
     background: linear-gradient(180deg, var(--night) 0%, var(--charcoal) 100%);
@@ -108,11 +115,18 @@
   .cover-card {
     position: relative;
     min-height: 420px;
-    background-size: cover;
-    background-position: center top;
     text-decoration: none;
     overflow: hidden;
     transition: transform .2s ease;
+  }
+  .cover-card-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 0;
   }
   .cover-card:hover { transform: translateY(-4px); }
   .cover-card::before {
@@ -120,12 +134,13 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg, rgba(20,16,12,0.05) 35%, rgba(20,16,12,0.85) 75%, rgba(20,16,12,0.97) 100%);
+    z-index: 1;
   }
   .cover-card-content {
     position: absolute;
     left: 0; right: 0; bottom: 0;
     padding: 1.6rem;
-    z-index: 1;
+    z-index: 2;
   }
   .cover-card-content .tag { color: var(--gold); }
   .cover-card-content h3 { color: var(--parchment); }
@@ -140,11 +155,17 @@
   .join-strip h2 { font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 1rem; }
   .join-strip p { color: var(--parchment-dim); max-width: 480px; margin: 0 auto 2rem; }
   .btn-primary {
-    background: var(--gold); color: var(--night); padding: 0.85rem 1.8rem; text-decoration: none;
+    background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%); color: var(--night); padding: 0.85rem 1.8rem; text-decoration: none;
     font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.9rem; border-radius: 2px;
-    display: inline-block; transition: transform .15s ease;
+    display: inline-block;
+    box-shadow: 0 14px 24px -10px rgba(0,0,0,0.55), 0 4px 10px -4px rgba(201,162,39,0.45);
+    transform: translateY(-3px);
+    transition: transform .2s ease, box-shadow .2s ease;
   }
-  .btn-primary:hover { transform: translateY(-2px); }
+  .btn-primary:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.6), 0 6px 14px -4px rgba(201,162,39,0.55);
+  }
 
   footer {
     background: var(--ink); color: rgba(239,230,211,0.6); padding: 2.5rem 5vw;
@@ -173,9 +194,10 @@
   <div class="nav-links">
     <a href="book.html">The Book</a>
     <a href="series.html" class="active">The Series</a>
+    <a href="free-chapter.html">Free Chapter</a>
     <a href="join.html">Join Us</a>
   </div>
-  <a class="nav-cta" href="https://rayankhan0.gumroad.com/l/AsSiddique" target="_blank" rel="noopener">Get the Book</a>
+  <a class="nav-cta" href="https://wa.me/923317537184?text=I%20want%20The%20Legend%20of%20As-Siddique%20Book" target="_blank" rel="noopener">Get the Book</a>
 </nav>
 
 <header class="hero">
@@ -199,7 +221,8 @@
   </div>
   <h2>Where the series stands today.</h2>
   <div class="volume-cards">
-    <a href="book.html" class="volume-card featured cover-card" style="background-image: url('as-siddique-cover-flat.png');">
+    <a href="book.html" class="volume-card featured cover-card">
+      <img src="as-siddique-cover-flat.png" alt="The Legend of As-Siddique book cover" class="cover-card-img">
       <div class="cover-card-content">
         <span class="tag">Book One — Available Now</span>
         <h3>The Legend of As-Siddique</h3>
